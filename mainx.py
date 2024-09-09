@@ -89,7 +89,6 @@ async def read_items(q: str = Query(default=Required, min_length=3)):
     results = {"items": [{"item_id": "foo"}, {"item_id": "bar"}]}
     if q:
         results.update({"q": q})
-    return results
 
 
 @app.get("/get/items6/")
